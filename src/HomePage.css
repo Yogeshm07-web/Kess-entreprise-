@@ -1,127 +1,115 @@
-/* Keyframes for the fade-in effect */
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Styles for the home container */
-  .home-container {
-    max-width: 100%;
-    height: 100vh; /* Set height to full viewport height */
-    background-color: #1a1a1a; /* Dark background color for welding theme */
-    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
-    position: relative; /* Add position relative to position child elements */
-    color: #fff; /* Set font color to white */
-    padding: 50px; /* Add padding for better layout */
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Align children vertically */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-  
-  .overlay {
-    position: absolute; /* Position the overlay on top of the background color */
+/* Header styles */
+.weldo-header {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    background-image: url('https://www.aaronmachineshop.com/wp-content/uploads/2022/10/2018-986-AaronMachineShop-GeneralmachininginCalgaryAlberta.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px #dbbdecd7;
+    color: #f9f9f9e4;
+    height: calc(100vh - 70px); /* Subtract navbar height from viewport height */
+}
+
+/* Navbar styles */
+.weldo-nav {
+    position: fixed; /* Fix the navbar position */
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+    z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+/* Navbar content styles */
+.weldo-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.weldo-nav ul li {
+    margin-right: 50px;
+}
+
+.weldo-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.weldo-nav ul li a:hover {
+    color: #ff0; /* Change text color on hover */
+}
+
+/* Adjust header content position */
+.weldo-header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Call to action section styles */
+.weldo-cta {
+    position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .header {
-    text-align: center; /* Center align all content within the header */
-  }
-  
-  .header h1 {
-    font-size: 75px;
-    animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
-    color: #ffd700; /* Gold font color for welding theme */
-    font-weight: bold; /* Make the font bold */
-    text-transform: uppercase; /* Uppercase text */
-  }
-  
-  .header h2,
-  .header p {
-    font-size: 19px;
-    color: #b1c2e0; /* White font color */
-    font-style: italic; /* Make the font italic */
-  }
-  
-  .content {
-    margin-top: 40px;
-    font-size: 16px;
-  }
-  
-  .services {
-    margin-top: 0px; /* Add margin between sections */
-  }
-  
-  .services h2 {
-    font-size: 24px; /* Increase font size for section headings */
-  }
-  
-  .service {
-    margin-bottom: 30px; /* Add margin between services */
-  }
-  
-  .service h3 {
-    font-size: 20px; /* Increase font size for service headings */
-  }
-  
-  .slide-container {
-    width: 100%;
-    overflow: hidden;
-    margin-top: 100px; /* Add margin between sections */
-  }
-  
-  .slide-panel {
-    display: flex;
-    justify-content: center; /* Center the slide panel horizontally */
-    border: px solid #ffd700; /* Add border to the slide panel with gold color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add box shadow to the slide panel for a subtle effect */
-  }
-  
-  .slide-wrapper {
-    display: flex;
-    align-items: center; /* Center the slide images vertically */
-    transition: transform 0.5s ease;
-  }
-  
-  .slide-image {
-    width: 100%; /* Set the width to fill the slide panel */
-    height: 500px; /* Set a smaller height for welding theme */
-    object-fit: cover; /* Ensure the image covers the entire container, preserving its aspect ratio */
-    display: none;
-  }
-  
-  .slide-image.active {
-    display: block;
-  }
-  
-  .slide-panel:hover {
-    border-color: #ffd700; /* Change border color on hover to gold */
-    transform: scale(1.05); /* Scale up the panel on hover */
-  }
-  
-  /* KESS ENTERPRISE Heading Styles */
-  .top-heading {
-    font-size: 85px;
-    color: #f5d20d; /* Gold color */
-    text-transform: uppercase;
-    font-weight: bold;
+    justify-content: space-around;
+    width: 80%;
+    background-color: rgba(226, 212, 211, 0.036);
+    color: var(--primary-color);
+    padding: 30px 0;
+}
+
+/* CTA item styles */
+.cta-item {
     text-align: center;
-    margin-top: 2px; /* Adjust as needed */
-    text-shadow: 2px 2px 4px rgba(242, 246, 8, 0.803); /* Add shadow */
-    -webkit-text-stroke: 1px rgb(32, 32, 30); /* Add outline */
-    -webkit-text-fill-color: transparent; /* Make text transparent */
-  }
-  
+    background-color: var(--accent-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e7bfbf74;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    width: 30%;
+    color: #120101dd;
+}
+
+.cta-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(116, 38, 38, 0.2);
+}
+
+.cta-item h2 {
+    font-size: 3.5em; /* Larger font size */
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.cta-item p {
+    font-size: 2.5em; /* Larger font size */
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.cta-item:hover h2,
+.cta-item:hover p {
+    color: #fff;
+}
+
+/* Additional hover effect for better interaction */
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+/* Increase font size of h1 */
+.weldo-header h1 {
+    font-size: 5em; /* Adjust font size as needed */
+}
