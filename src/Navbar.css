@@ -1,76 +1,94 @@
-/* Navbar */
+/* Navbar styles */
 .navbar {
     background-color: #333;
-    padding: 10px 20px;
+    padding: 10px 0;
   }
   
   .navbar-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .navbar-logo img {
-    width: 100px;
+    height: 40px;
+    margin-right: 10px;
   }
   
   .navbar-links {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
   }
   
   .navbar-links li {
-    margin-left: 20px;
+    margin-right: 20px;
   }
   
-  .navbar-links li:first-child {
-    margin-left: 0;
-  }
-  
-  .navbar-links a {
+  .navbar-links li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
   }
   
-  .navbar-links a:hover {
-    color: #ff6600;
+  .navbar-links li a:hover {
+    color: gold;
   }
   
   .menu-icon {
-    display: none; /* Hide menu icon by default */
+    display: none;
     cursor: pointer;
-    color: #fff;
   }
   
-  /* Responsive */
   @media screen and (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      align-items: center;
+    .menu-icon {
+      display: block;
     }
   
     .navbar-links {
-      margin-top: 20px;
-      justify-content: center;
+      display: none;
       flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 10px 0;
+      z-index: 10;
       text-align: center;
-      display: none; /* Hide navigation links by default on small screens */
     }
   
     .navbar-links.open {
-      display: flex; /* Show navigation links when menu is open */
+      display: flex;
     }
   
     .navbar-links li {
       margin: 10px 0;
     }
+  }
   
-    .menu-icon {
-      display: block; /* Show menu icon on small screens */
-    }
+  /* AboutPage styles */
+  .about-page {
+    background-image: url('https://unimig.com.au/wp-content/uploads/2021/03/The-Ultimate-Gudie-to-MIG-Welding-1024x614.jpg');
+    background-size: cover; /* Automatically scale the background image to cover the container */
+    background-position: center;
+    background-attachment: fixed; /* Fix the background image to the viewport */
+    padding: 0; /* Adjust padding to fill the entire viewport */
+    margin: 0; /* Remove margin to ensure the image fills the entire viewport */
+    height: 100vh; /* Set height to 100% of the viewport height */
+  }
+  
+  .about-title {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .about-content {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
   }
   

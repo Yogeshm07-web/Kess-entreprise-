@@ -24,31 +24,48 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <div className="overlay">
-        <div className="header">
-          <h1>KESS ENTREPRISE</h1>
-          <h2>Don't Compromise on Safety</h2>
-          <p>Transform your home's security with our premium burglar bars today!</p>
-        </div>
-        <div className="content">
-        </div>
-        {/* Slide Panel */}
-        <div className="slide-container">
-          <div className="slide-panel">
-            <div className="slide-wrapper">
-              {images.map((imageUrl, index) => (
-                <img
-                  key={index}
-                  src={imageUrl}
-                  alt={`Image ${index + 1}`}
-                  className={index === currentImageIndex ? 'slide-image active' : 'slide-image'}
-                />
-              ))}
-            </div>
+      {/* Top Heading */}
+      <h1 className="top-heading">KESS ENTERPRISE</h1>
+
+      {/* Hero Section */}
+      <div className="hero">
+        <div className="overlay">
+          <div className="header">
+            <h2>Don't Compromise on Safety</h2>
+            <p>Transform your home's security with our premium burglar bars today!</p>
           </div>
         </div>
-        {/* End of Slide Panel */}
       </div>
+      {/* End of Hero Section */}
+
+      {/* Services Section */}
+      <div className="services">
+        <div className="service">
+          <p>We provide top-quality welding services for residential and commercial projects.</p>
+        </div>
+        <div className="service">
+          <h3>Metal Fabrication</h3>
+          <p>Our skilled craftsmen can fabricate custom metal products to meet your specifications.</p>
+        </div>
+      </div>
+      {/* End of Services Section */}
+
+      {/* Slideshow */}
+      <div className="slide-container">
+        <div className="slide-panel">
+          <div className="slide-wrapper">
+            {images.map((imageUrl, index) => (
+              <img
+                key={index}
+                src={imageUrl}
+                alt={`Slide ${index + 1}`} // Updated alt attribute
+                className={index === currentImageIndex ? 'slide-image active' : 'slide-image'}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* End of Slideshow */}
     </div>
   );
 };

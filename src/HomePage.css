@@ -1,12 +1,26 @@
-/* Styles for the home container */
-.home-container {
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Styles for the home container */
+  .home-container {
     max-width: 100%;
     height: 100vh; /* Set height to full viewport height */
-    background-color: #666363; /* Set a nice theme color */
-    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background color for welding theme */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
     position: relative; /* Add position relative to position child elements */
     color: #fff; /* Set font color to white */
     padding: 50px; /* Add padding for better layout */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
   
   .overlay {
@@ -28,12 +42,18 @@
   }
   
   .header h1 {
-    font-size: 45px;
+    font-size: 75px;
+    animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
+    color: #ffd700; /* Gold font color for welding theme */
+    font-weight: bold; /* Make the font bold */
+    text-transform: uppercase; /* Uppercase text */
   }
   
   .header h2,
   .header p {
-    font-size: 18px;
+    font-size: 19px;
+    color: #b1c2e0; /* White font color */
+    font-style: italic; /* Make the font italic */
   }
   
   .content {
@@ -41,16 +61,33 @@
     font-size: 16px;
   }
   
+  .services {
+    margin-top: 0px; /* Add margin between sections */
+  }
+  
+  .services h2 {
+    font-size: 24px; /* Increase font size for section headings */
+  }
+  
+  .service {
+    margin-bottom: 30px; /* Add margin between services */
+  }
+  
+  .service h3 {
+    font-size: 20px; /* Increase font size for service headings */
+  }
+  
   .slide-container {
     width: 100%;
     overflow: hidden;
+    margin-top: 100px; /* Add margin between sections */
   }
   
   .slide-panel {
     display: flex;
     justify-content: center; /* Center the slide panel horizontally */
-    border: 2px solid #fff; /* Add border to the slide panel */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow to the slide panel */
+    border: px solid #ffd700; /* Add border to the slide panel with gold color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add box shadow to the slide panel for a subtle effect */
   }
   
   .slide-wrapper {
@@ -61,7 +98,7 @@
   
   .slide-image {
     width: 100%; /* Set the width to fill the slide panel */
-    height: 800px; /* Set the height to your desired value */
+    height: 500px; /* Set a smaller height for welding theme */
     object-fit: cover; /* Ensure the image covers the entire container, preserving its aspect ratio */
     display: none;
   }
@@ -71,7 +108,20 @@
   }
   
   .slide-panel:hover {
-    border-color: #ff6600; /* Change border color on hover */
+    border-color: #ffd700; /* Change border color on hover to gold */
     transform: scale(1.05); /* Scale up the panel on hover */
+  }
+  
+  /* KESS ENTERPRISE Heading Styles */
+  .top-heading {
+    font-size: 85px;
+    color: #f5d20d; /* Gold color */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2px; /* Adjust as needed */
+    text-shadow: 2px 2px 4px rgba(242, 246, 8, 0.803); /* Add shadow */
+    -webkit-text-stroke: 1px rgb(32, 32, 30); /* Add outline */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
   }
   
