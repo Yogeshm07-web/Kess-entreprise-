@@ -1,18 +1,16 @@
-/* HomePage.css (merged and fixed) */
-
 /* Styles for the home container */
 .home-container {
     max-width: 100%;
     height: 100vh; /* Set height to full viewport height */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
+    background-color: #666363; /* Set a nice theme color */
     font-family: 'Arial', sans-serif;
     position: relative; /* Add position relative to position child elements */
+    color: #fff; /* Set font color to white */
+    padding: 50px; /* Add padding for better layout */
   }
   
   .overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black overlay */
-    position: absolute; /* Position the overlay on top of the background image */
+    position: absolute; /* Position the overlay on top of the background color */
     top: 0;
     left: 0;
     right: 0;
@@ -21,7 +19,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
   }
   
   .header {
@@ -30,19 +29,16 @@
   
   .header h1 {
     font-size: 45px;
-    color: #fff; /* Change text color to white */
   }
   
   .header h2,
   .header p {
     font-size: 18px;
-    color: #fff; /* Change text color to white */
   }
   
   .content {
     margin-top: 40px;
     font-size: 16px;
-    color: #fff; /* Change text color to white */
   }
   
   .slide-container {
@@ -65,38 +61,13 @@
   
   .slide-image {
     width: 100%; /* Set the width to fill the slide panel */
-    height: 600px; /* Set the height to your desired value */
+    height: 800px; /* Set the height to your desired value */
     object-fit: cover; /* Ensure the image covers the entire container, preserving its aspect ratio */
     display: none;
   }
   
   .slide-image.active {
     display: block;
-  }
-  
-  .slide-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 18px;
-  }
-  
-  .slide-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .slide-nav.prev {
-    left: 20px;
-  }
-  
-  .slide-nav.next {
-    right: 20px;
   }
   
   .slide-panel:hover {

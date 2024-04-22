@@ -23,7 +23,7 @@ const HomePage = () => {
   }, [images.length]); // Re-run effect when the number of images changes
 
   return (
-    <div className="home-container" style={{ backgroundImage: "url('https://wallpapers.com/images/high/welding-awvwri9zutzxqv9f.webp')" }}>
+    <div className="home-container">
       <div className="overlay">
         <div className="header">
           <h1>KESS ENTREPRISE</h1>

@@ -1,17 +1,17 @@
-/* Navbar.css (merged with existing CSS block) */
+/* Navbar */
 .navbar {
-    background-color: #333; /* Set background color for the navbar */
+    background-color: #333;
+    padding: 10px 20px;
   }
   
   .navbar-container {
     display: flex;
-    justify-content: space-between; /* Align items to the start and end of the container */
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Add padding for better spacing */
   }
   
   .navbar-logo img {
-    width: 100px; /* Adjust the logo size as needed */
+    width: 100px;
   }
   
   .navbar-links {
@@ -19,39 +19,58 @@
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center; /* Align menu items vertically */
+    align-items: center;
   }
   
   .navbar-links li {
-    margin-left: 20px; /* Add spacing between menu items */
+    margin-left: 20px;
   }
   
   .navbar-links li:first-child {
-    margin-left: 0; /* Remove margin from the first menu item */
+    margin-left: 0;
   }
   
   .navbar-links a {
     text-decoration: none;
-    color: #fff; /* Set color for the menu links */
-    transition: color 0.3s ease; /* Add transition effect for color change */
+    color: #fff;
+    transition: color 0.3s ease;
   }
   
   .navbar-links a:hover {
-    color: #ff6600; /* Change color on hover */
+    color: #ff6600;
   }
   
+  .menu-icon {
+    display: none; /* Hide menu icon by default */
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* Responsive */
   @media screen and (max-width: 768px) {
     .navbar-container {
-      flex-direction: column; /* Change to column layout on smaller screens */
+      flex-direction: column;
+      align-items: center;
     }
   
     .navbar-links {
-      margin-top: 20px; /* Add spacing between logo and menu on smaller screens */
-      justify-content: flex-end; /* Align items to the end of the container */
+      margin-top: 20px;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      display: none; /* Hide navigation links by default on small screens */
+    }
+  
+    .navbar-links.open {
+      display: flex; /* Show navigation links when menu is open */
     }
   
     .navbar-links li {
-      margin: 10px 0; /* Add spacing between menu items on smaller screens */
+      margin: 10px 0;
+    }
+  
+    .menu-icon {
+      display: block; /* Show menu icon on small screens */
     }
   }
   
