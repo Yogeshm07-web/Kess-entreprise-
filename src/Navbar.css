@@ -1,0 +1,56 @@
+nav {
+    background-color: #333; /* Set background color for the navbar */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center;
+    padding: 10px 20px; /* Add padding for better spacing */
+  }
+  
+  .navbar-logo img {
+    width: 100px; /* Adjust the logo size as needed */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align menu items vertically */
+  }
+  
+  .navbar-links li {
+    margin-left: 20px; /* Add spacing between menu items */
+  }
+  
+  .navbar-links li:first-child {
+    margin-left: 0; /* Remove margin from the first menu item */
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff; /* Set color for the menu links */
+    transition: color 0.3s ease; /* Add transition effect for color change */
+  }
+  
+  .navbar-links a:hover {
+    color: #ff6600; /* Change color on hover */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column; /* Change to column layout on smaller screens */
+    }
+  
+    .navbar-links {
+      margin-top: 20px; /* Add spacing between logo and menu on smaller screens */
+      justify-content: flex-end; /* Align items to the end of the container */
+    }
+  
+    .navbar-links li {
+      margin: 10px 0; /* Add spacing between menu items on smaller screens */
+    }
+  }
+  
