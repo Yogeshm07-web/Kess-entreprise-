@@ -1,3 +1,6 @@
+/* App.css (merged and fixed) */
+
+/* Styles for the App component */
 .App {
   text-align: center;
 }
@@ -37,3 +40,7 @@
   }
 }
 
+/* Styles for the app container */
+.app-container {
+  /* Add styles for your app container */
+}
