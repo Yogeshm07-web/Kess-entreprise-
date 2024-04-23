@@ -1,94 +1,105 @@
 /* Navbar styles */
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
+  background-color: #1a1a1a; /* Dark background color */
+  padding: 20px; /* Add padding to the navbar */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items evenly */
+  position: fixed; /* Fix the navbar position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.navbar-logo img {
+  height: 40px; /* Adjust logo size */
+}
+
+.navbar-title {
+  color: #f3eb0b; /* Gold text color */
+  font-size: 36px; /* Adjusted font size for readability */
+  font-weight: bold; /* Add bold font weight */
+  text-transform: uppercase; /* Convert text to uppercase */
+  position: fixed; /* Fix the title position */
+  top: 20px; /* Align the title to the top */
+  left: 50%; /* Align the title to the middle horizontally */
+  transform: translateX(-50%); /* Center the title horizontally */
+  animation: glow 2s infinite alternate; /* Add glow animation */
+  text-shadow: 0 0 8px #f3eb0b, 0 0 16px #f3eb0b, 0 0 24px #f3eb0b; /* Adjusted shadow for better readability */
+  transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+/* Add hover effect */
+.navbar-title:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px #f3eb0b, 0 0 16px #f3eb0b, 0 0 24px #f3eb0b; /* Adjusted initial shadow */
   }
-  
-  .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+  to {
+    text-shadow: 0 0 16px #f3eb0b, 0 0 24px #f3eb0b, 0 0 32px #f3eb0b; /* Adjusted final shadow */
   }
-  
-  .navbar-logo img {
-    height: 70px;
-    margin-right: 10px;
-  }
-  
-  .navbar-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar-links li {
-    margin-right: 20px;
-  }
-  
-  .navbar-links li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links li a:hover {
-    color: gold;
-  }
-  
+}
+
+
+
+
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ffffff; /* White text color */
+  font-size: 16px; /* Adjust font size */
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #ff9800; /* Orange hover color */
+}
+
+/* Menu icon for mobile */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #ffffff; /* White color */
+}
+
+@media screen and (max-width: 768px) {
   .menu-icon {
+    display: block;
+  }
+
+  .navbar-links {
     display: none;
-    cursor: pointer;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust distance from the top */
+    left: 0;
+    width: 100%; /* Take full width of the viewport */
+    background-color: #1a1a1a; /* Dark background color */
+    padding: 20px 0;
+    z-index: 1000; /* Ensure navbar is above other elements */
+    text-align: center;
   }
-  
-  @media screen and (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #333;
-      padding: 20px 0;
-      z-index: 10;
-      text-align: center;
-    }
-  
-    .navbar-links.open {
-      display: flex;
-    }
-  
-    .navbar-links li {
-      margin: 10px 0;
-    }
+
+  .navbar-links.open {
+    display: flex;
   }
-  
-  /* AboutPage styles */
-  .about-page {
-    background-image: url('https://unimig.com.au/wp-content/uploads/2021/03/The-Ultimate-Gudie-to-MIG-Welding-1024x614.jpg');
-    background-size: cover; /* Automatically scale the background image to cover the container */
-    background-position: center;
-    background-attachment: fixed; /* Fix the background image to the viewport */
-    padding: 0; /* Adjust padding to fill the entire viewport */
-    margin: 0; /* Remove margin to ensure the image fills the entire viewport */
-    height: 100vh; /* Set height to 100% of the viewport height */
+
+  .navbar-links li {
+    margin: 10px 0;
   }
-  
-  .about-title {
-    color: white;
-    font-size: 24px;
-  }
-  
-  .about-content {
-    color: white;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
+}

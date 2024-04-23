@@ -19,6 +19,7 @@ const Navbar = () => {
                         <img src="https://www.freeiconspng.com/thumbs/logo-facebook-png/hd-logo-facebook-png-transparent-background-30.png" alt="Facebook Logo" />
                     </a>
                 </div>
+                <h1 className="navbar-title">KESS ENTREPRISE</h1>
                 <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
                     <li><Link to="/home" onClick={toggleMenu}>Home</Link></li>
                     <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
@@ -33,4 +34,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar; 
