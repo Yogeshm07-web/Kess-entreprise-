@@ -1,35 +1,46 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Header styles */
 .weldo-header {
-    position: relative;
-    text-align: center;
-    padding: 0;
     background-image: url('https://www.aaronmachineshop.com/wp-content/uploads/2022/10/2018-986-AaronMachineShop-GeneralmachininginCalgaryAlberta.jpg');
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 10px #dbbdecd7;
-    color: #f9f9f9e4;
-    height: calc(100vh - 70px); /* Subtract navbar height from viewport height */
+    color: #fff;
+    padding: 95px 0;
+    text-align: center;
+}
+
+.weldo-header h1 {
+    font-size: 3em;
 }
 
 /* Navbar styles */
 .weldo-nav {
-    position: fixed; /* Fix the navbar position */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
-    z-index: 1000; /* Ensure navbar is above other elements */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px 0;
 }
 
-/* Navbar content styles */
 .weldo-nav ul {
-    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .weldo-nav ul li {
-    margin-right: 50px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 .weldo-nav ul li a {
@@ -39,77 +50,27 @@
 }
 
 .weldo-nav ul li a:hover {
-    color: #ff0; /* Change text color on hover */
-}
-
-/* Adjust header content position */
-.weldo-header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    color: #ff6b6b; /* Match the vibrant red color in the header */
 }
 
 /* Call to action section styles */
 .weldo-cta {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    background-color: rgba(226, 212, 211, 0.036);
-    color: var(--primary-color);
-    padding: 30px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 50px 0;
+    text-align: center;
 }
 
-/* CTA item styles */
 .cta-item {
-    text-align: center;
-    background-color: var(--accent-color);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #e7bfbf74;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    width: 30%;
-    color: #120101dd;
+    display: inline-block;
+    background-color: #333;
+    color: #ece3e3;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
 }
 
 .cta-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(116, 38, 38, 0.2);
-}
-
-.cta-item h2 {
-    font-size: 3.5em; /* Larger font size */
-    margin-bottom: 15px;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-}
-
-.cta-item p {
-    font-size: 2.5em; /* Larger font size */
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.cta-item:hover h2,
-.cta-item:hover p {
-    color: #fff;
-}
-
-/* Additional hover effect for better interaction */
-body {
-    font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary-color);
-    overflow: hidden;
-}
-
-/* Increase font size of h1 */
-.weldo-header h1 {
-    font-size: 5em; /* Adjust font size as needed */
+    background-color: #444;
 }

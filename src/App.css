@@ -1,38 +1,44 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center content within the viewport */
 .App {
+  text-align: center;
+  min-height: 100vh; /* Ensure the content fills the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo styles */
+.App-logo {
+  height: 20vmin; /* Adjust logo size for better responsiveness */
+  max-width: 100%; /* Ensure the logo does not exceed its container */
+  margin-bottom: 20px; /* Add spacing below the logo */
+}
+
+/* Header styles */
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
+/* Link styles */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-link:hover {
+  color: #38a3d1; /* Darker color on hover for better contrast */
 }
