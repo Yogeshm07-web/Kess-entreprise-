@@ -1,15 +1,15 @@
 import React from 'react';
 import './HomePage.css'; // Import the CSS file for styling
 
-const WeldoHomePage = () => {
+const HomePage = () => {
     return (
         <div className="welding-iron-works">
-            <header className="weldo-header">
+            <header className="home-page-header">
                 <h1>Your home's security with our premium burglar bars today!</h1>
                 <p>WE BUILD THE BEST.</p>   
             </header>
             {/* Call to action section */}
-            <section className="weldo-cta">
+            <section className="home-page-cta">
                 <div className="cta-item">
                     <h2>01 GIVE US A CALL</h2>
                     {/* Add additional content as needed */}
@@ -28,4 +28,4 @@ const WeldoHomePage = () => {
     );
 };
 
-export default WeldoHomePage;
+export default HomePage;
