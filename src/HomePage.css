@@ -12,7 +12,7 @@ body {
 }
 
 /* Header styles */
-.weldo-header {
+.home-page-header {
     background-image: url('https://www.aaronmachineshop.com/wp-content/uploads/2022/10/2018-986-AaronMachineShop-GeneralmachininginCalgaryAlberta.jpg');
     background-size: cover;
     background-position: center;
@@ -21,40 +21,12 @@ body {
     text-align: center;
 }
 
-.weldo-header h1 {
+.home-page-header h1 {
     font-size: 3em;
 }
 
-/* Navbar styles */
-.weldo-nav {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    padding: 20px 0;
-}
-
-.weldo-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.weldo-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.weldo-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.weldo-nav ul li a:hover {
-    color: #ff6b6b; /* Match the vibrant red color in the header */
-}
-
 /* Call to action section styles */
-.weldo-cta {
+.home-page-cta {
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 50px 0;
     text-align: center;
